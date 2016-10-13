@@ -1,0 +1,46 @@
+/*
+exercicio 5
+ primitivewritechars
+ Neste exercicio seguiremos tratando os fluxos binarios de datos pero agora tratandoos como soporte de tipos de dato primitivos e valores String
+
+DataInputStream dispon dunha serie de  métodos  para que partindo  de fluxos binaros de datos  podamos ler tipos primitivos de datos e valores String 
+
+DataOutputStream dispon dunha serie de  métodos  para que partindo  de fluxos binaros de datos  podamos escribir tipos primitivos de datos e valores String que previamente foron codificados nestes fluxos mediante DataInputStream
+
+Dado que DatainputStream admite como parametro calquer clase herdada de InputStream , e BufferedInputStream cumpre este requisito,  o único que temos que facer para poder usar os metodos de DataInputStream e pasarlle como parmaetro un obxecto BufferedInputStream coma otraballado no exercicio anterior (primitiveWriteUTF)
+
+
+Dado que DataOutputStream admite como parametro calquer clase herdada de OutputStream , e BufferedOutputStream cumpre este requisito o único que temos que facer para poder usar os metodos de DataOutputStream e pasarlle como parmaetro un obxecto BufferedOutputStream coma o traballado no exercicio anterior (primitiveWriteUTF)
+
+Propoñovos un exercicio que consistirá grabar unha mesma cadea  de texto duas veces usando o metodo  writeChars(String) nun ficheiro denominado text4.txt para posteriormente recuperalas mediante o metodo readChar().
+
+Ter en conta que writeChars(String) escribe 2 bytes por caracter  (podemos cambiar calquera vogal da cadea por esa mesma vogal acentuada ou unha letra ñ e veremos que a lonxitude da cadea non varia
+
+Ter en cota que readChar() lé un caracter de cada vez co cal haberá que facer un bucle que  execute esta instruccion tantas veces como letras ten a cadea previamente grabada  
+
+
+cadea a grabar : "esta e unha cadea\n"
+
+
+o resultado da execucion debería ser o seguinte:
+
+
+
+writeChars escribiu: Esta e unha cadea\n
+writeChars escribiu:  36bytes
+writeChars escribiu: Esta e unha cadea\n
+writeChars escribiu:  36bytes
+bytes totais escritos = 72
+lemos a primeira cadea:  Esta e unha cadea
+
+o numero de bytes lidos e :36
+bytes restantes por ler : 36
+lemos a segunda cadea:  Esta e unha cadea
+
+o numero de bytes lidos e :36
+bytes restantes por ler : 0
+
+
+
+Podemos comprobar que se intentamos abrir a o ficheiro de texto  text3.txt co editor gedit non o permite. debemos usar nano , vi , emacs ou outro editor non grafico  e comprobaremos a forma en que foron grabadas as  cadeas.
+
